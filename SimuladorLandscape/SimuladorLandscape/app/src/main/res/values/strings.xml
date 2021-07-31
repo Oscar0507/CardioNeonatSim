@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">CardioNeonatSim</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_parameters">Parámetros</string>
+    <string name="title_ecg">Parámetros_ECG_y_Pulso</string>
+    <string name="title_plotting">Monitor</string>
+    <string name="cardioneonatsim">CardioNeonatSim</string>
+    <string name="simulador_cardiovascular_para_neonatos">Simulador Cardiovascular para Neonatos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="medicalScenes">
+        <item>Normal</item>
+        <item>Isquemia</item>
+        <item>Hiperpotasemia</item>
+        <item>Hipopotasemia</item>
+        <item>Hipercalcemia</item>
+        <item>Hipocalcemia</item>
+        <item>Hipotermia</item>
+        <item>Taquicardia</item>
+        <item>Fiebre</item>
+        <item>Bradipnea</item>
+        <item>Bradicardia</item>
+        <item>Taquipnea</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

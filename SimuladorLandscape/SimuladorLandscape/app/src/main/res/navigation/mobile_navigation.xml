@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.simuladorlandscape.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_params"
+        android:name="com.example.simuladorlandscape.ui.parameters.ParamsFragment"
+        android:label="@string/title_parameters"
+        tools:layout="@layout/fragment_params" >
+        <action
+            android:id="@+id/action_navigation_params_to_ECGFragment"
+            app:destination="@id/ECG" />
+        <action
+            android:id="@+id/action_navigation_params_to_MecResp"
+            app:destination="@id/MecResp" />
+        <action
+            android:id="@+id/action_navigation_params_to_sistCVFragment"
+            app:destination="@id/SistCV" />
+        <action
+            android:id="@+id/action_navigation_params_to_configMedScene"
+            app:destination="@id/configMedScene" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_plots"
+        android:name="com.example.simuladorlandscape.ui.plots.PlotsFragment"
+        android:label="@string/title_plotting"
+        tools:layout="@layout/fragment_plots" />
+    <fragment
+        android:id="@+id/ECG"
+        android:name="com.example.simuladorlandscape.ui.parameters.innerParameters.ECGParam.ECGFragment"
+        android:label="AjustesECGyPulso"
+        tools:layout="@layout/ecg">
+        <action
+            android:id="@+id/action_ECGFragment_to_navigation_params"
+            app:destination="@id/navigation_params"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/MecResp"
+        android:name="com.example.simuladorlandscape.ui.parameters.innerParameters.MecRespParam.MecRespFragment"
+        android:label="AjustesMecResp"
+        tools:layout="@layout/fragment_mec_resp" >
+        <action
+            android:id="@+id/action_MecResp_to_navigation_params"
+            app:destination="@id/navigation_params" />
+    </fragment>
+    <fragment
+        android:id="@+id/SistCV"
+        android:name="com.example.simuladorlandscape.ui.parameters.innerParameters.SistCVParam.SistCVFragment"
+        android:label="AjustesCardVasc"
+        tools:layout="@layout/fragment_sist_cv">
+        <action
+            android:id="@+id/action_sistCVFragment_to_navigation_params"
+            app:destination="@id/navigation_params" />
+    </fragment>
+    <fragment
+        android:id="@+id/configMedScene"
+        android:name="com.example.simuladorlandscape.ui.parameters.ConfigMedScene"
+        android:label="fragment_config_med_scene"
+        tools:layout="@layout/fragment_config_med_scene" >
+        <action
+            android:id="@+id/action_configMedScene_to_navigation_params"
+            app:destination="@id/navigation_params" />
+    </fragment>
+</navigation>

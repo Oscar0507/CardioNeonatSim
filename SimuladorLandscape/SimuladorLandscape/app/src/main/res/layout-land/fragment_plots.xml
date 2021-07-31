@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewFCard"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarplotFrecCard"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarplotFrecResp"
+        app:layout_constraintStart_toEndOf="@+id/textViewFrecCard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFResp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarplotFrecResp"
+        app:layout_constraintStart_toEndOf="@+id/textViewFrecResp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFrecCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="left"
+        android:text="Frec.Card."
+        app:layout_constraintEnd_toStartOf="@+id/textViewFCard"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFrecResp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Frec.Resp."
+        app:layout_constraintEnd_toStartOf="@+id/textViewFResp"
+        app:layout_constraintStart_toStartOf="@+id/seekBarplotFrecResp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarplotFrecCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="2500"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarplotFrecResp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFCard" />
+
+    <SeekBar
+        android:id="@+id/seekBartgraf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="4"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/buttongraph"
+        app:layout_constraintStart_toEndOf="@+id/seekBarplotFrecResp" />
+
+    <SeekBar
+        android:id="@+id/seekBarplotFrecResp"
+        android:layout_width="0dp"
+        android:max="1200"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/seekBartgraf"
+        app:layout_constraintStart_toEndOf="@+id/seekBarplotFrecCard"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFrecResp" />
+
+    <TextView
+        android:id="@+id/textViewTgraf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="t.Graf:"
+        app:layout_constraintEnd_toStartOf="@id/TextViewTmax"
+        app:layout_constraintStart_toEndOf="@+id/seekBarplotFrecResp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewTmax"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/switchModificar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchModificar"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:text="Mod."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttongraph"
+        android:layout_width="104dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="1dp"
+        android:text="Graficar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchModificar" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBarplotFrecResp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechartMonitor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="15"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="85"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewFrCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Frec.CardV." />
+
+                <TextView
+                    android:id="@+id/editTextFrCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-smallcaps" />
+                <TextView
+                    android:id="@+id/textViewFrVasc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Frec.Vasc"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/editTextFrVasc"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewFrResp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Frec.Resp." />
+
+                <TextView
+                    android:id="@+id/editTextFrResp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-smallcaps" />
+
+                <TextView
+                    android:id="@+id/textViewArtPress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="PresiónArt" />
+
+                <TextView
+                    android:id="@+id/editTextArtPress"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-smallcaps" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewSysPress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Sys:" />
+
+                    <TextView
+                        android:id="@+id/editTextSysPress"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewDiasPress"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Diast:" />
+
+                    <TextView
+                        android:id="@+id/editTextDiasPress"
+                        android:layout_width="34dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewPH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="SatOxig" />
+
+                <TextView
+                    android:id="@+id/editTextPH"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-smallcaps" />
+
+                <TextView
+                    android:id="@+id/textViewCO2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="NivCO2" />
+
+                <TextView
+                    android:id="@+id/editTextCO2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:fontFamily="sans-serif-smallcaps" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

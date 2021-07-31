@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.parameters.innerParameters.MecRespParam.MecRespFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Parámetros Mecánica Ventilatoria"
+                app:fontFamily="sans-serif-smallcaps"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvTodosMecResp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonEnvTodosMecResp"
+                android:layout_width="76dp"
+                android:layout_height="49dp"
+                android:text="Enviar Todos"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextFR"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="Fresp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextFR"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:text="[resp/min]"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextFR"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/editTextFR"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvFResp"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/buttonEnvFResp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toEndOf="@+id/editTextFR"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="Fresp [Hz]"
+                app:layout_constraintEnd_toStartOf="@+id/editTextFr_Hz"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:text="[resp/seg]"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/editTextFr_Hz"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvPatm"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/buttonEnvDPmax"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toEndOf="@+id/editTextDPmax"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTresp" />
+
+            <Button
+                android:id="@+id/buttonEnvTinsp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toEndOf="@+id/editTextTinsp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDPmax" />
+
+            <Button
+                android:id="@+id/buttonEnvCapPulm"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toEndOf="@+id/editTextCapPulm"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTinsp" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="Patm"
+                app:layout_constraintEnd_toStartOf="@+id/editTextPatm"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTresp" />
+
+            <Button
+                android:id="@+id/buttonEnvPatm"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextPatm"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTresp" />
+
+            <Button
+                android:id="@+id/buttonEnvRresp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextRresp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPatm" />
+
+            <Button
+                android:id="@+id/buttonEnvV_D"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextV_D"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRresp" />
+
+            <EditText
+                android:id="@+id/editTextV_D"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvV_D"
+                app:layout_constraintStart_toEndOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRresp" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Vol.esp.muerto"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView60"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+            <EditText
+                android:id="@+id/editTextPatm"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvPatm"
+                app:layout_constraintStart_toEndOf="@+id/textView42"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTresp" />
+
+            <EditText
+                android:id="@+id/editTextRresp"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvRresp"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPatm" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:text="[mmHg]"
+                app:layout_constraintEnd_toStartOf="@+id/editTextPatm"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="DeltaPmáx"
+                app:layout_constraintEnd_toStartOf="@+id/editTextDPmax"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTresp" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="%Tinsp."
+                app:layout_constraintEnd_toStartOf="@+id/editTextTinsp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDPmax" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="[30-50%] Tresp"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView44"
+                app:layout_constraintStart_toStartOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="CapPulm"
+                app:layout_constraintEnd_toStartOf="@+id/editTextCapPulm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTinsp" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:text="[60-75 ml/Kg]"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextCapPulm"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView47" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="Rv.aéreas"
+                app:layout_constraintEnd_toStartOf="@+id/editTextRresp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPatm" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="V_D"
+                app:layout_constraintEnd_toStartOf="@+id/editTextV_D"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRresp" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="[20-40 cmH2O L/s]"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextRresp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:text="[mmHg]"
+                app:layout_constraintEnd_toStartOf="@+id/editTextDPmax"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="24dp"
+                android:text="Tresp [s]"
+                app:layout_constraintEnd_toStartOf="@+id/editTextTresp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFR" />
+
+            <TextView
+                android:id="@+id/editTextTresp"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                android:maxLength="5"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvFResp"
+                app:layout_constraintStart_toEndOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFR" />
+
+            <EditText
+                android:id="@+id/editTextDPmax"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvDPmax"
+                app:layout_constraintStart_toEndOf="@+id/textView40"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTresp" />
+
+            <EditText
+                android:id="@+id/editTextTinsp"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberSigned|numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvTinsp"
+                app:layout_constraintStart_toEndOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDPmax" />
+
+            <EditText
+                android:id="@+id/editTextCapPulm"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonEnvCapPulm"
+                app:layout_constraintStart_toEndOf="@+id/textView47"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTinsp" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="65dp"
+                android:layout_height="18dp"
+                android:text="Periodo resp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView19"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Gráfica Volumen y"
+                app:fontFamily="sans-serif-smallcaps"
+                app:layout_constraintBottom_toTopOf="@+id/textView36"
+                app:layout_constraintEnd_toStartOf="@+id/buttonGrafMecResp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCapPulm" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presión Respiratoria"
+                app:fontFamily="sans-serif-smallcaps"
+                app:layout_constraintBottom_toTopOf="@+id/linechartMecResp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonGrafMecResp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="mmHg"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linechartMecResp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonGrafMecResp" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="mlAir"
+                android:textColor="@color/colorAccent"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/linechartMecResp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonGrafMecResp" />
+
+            <Button
+                android:id="@+id/buttonGrafMecResp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graficar"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/linechartMecResp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView35"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCapPulm" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechartMecResp"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView57"
+                app:layout_constraintStart_toEndOf="@+id/textView58"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
